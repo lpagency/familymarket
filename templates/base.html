@@ -1,0 +1,371 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+         <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-69991660-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-69991660-1');
+        </script>
+        <!-- head bt inicio -->
+        <title>Family Market</title>
+        <base href="{{ site_base }}/">
+        <meta charset="utf-8">
+        <meta name="title" content="">
+        <meta name="description" content="">
+        <meta name="author" content="loadingplay.com">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="jquery, vertical, scrolling, scroll, smooth"/>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+       <!--  <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet"> -->
+       <!-- <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7400796/8002792/css/fonts.css" /> -->
+        <link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.css">
+        <link rel="stylesheet" href="{{ site_base }}/common/css/editableimage.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{{ site_base }}/static/css/style.css">
+        <link rel="stylesheet" href="{{ site_base }}/static/css/footer.css">
+        <link rel="stylesheet" href="{{ site_base }}/static/css/header.css">
+        <link rel="stylesheet" href="{{ site_base }}/static/css/gallery.ho.css">
+        <link rel="stylesheet" href="{{ site_base }}/static/css/listado_articulos.css">
+        <link rel="stylesheet" href="{{ site_base }}/static/css/listado_productos.css">
+        <link rel="stylesheet" href="{{ site_base }}/static/css/checkout.css">
+        <link rel="stylesheet" href="{{ site_base }}/static/css/simple-sidebar.css">
+
+
+        <link rel="stylesheet" type="text/css" href="{{ site_base }}/static/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+        <!-- aqui se ponen los demas css -de las paginas -->
+        <link rel="stylesheet" href="{{ site_base }}/common/css/editableimage.css">
+
+
+        <!-- autocomplete
+        <link rel="stylesheet" type="text/css" href="{{ site_base }}/static/js/plugins/selectize/selectize.css" />
+        <!-autocomplete -->
+       <link rel="stylesheet" href="{{ site_base }}/common/js/plugins/loadingplay/fileuploader/dist/fileuploader.css">
+
+
+        <link rel="stylesheet" href="{{ site_base }}/static/css/ligthbox-d.css">
+
+
+        <!-- <link rel="stylesheet" href="{{ site_base }}/static/js/fancybox/source/jquery.fancybox.css?v=2.1.5"> -->
+
+        <link rel="stylesheet" href="{{ site_base }}/common/css/ellipsis.css">
+
+
+
+        <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/s/dt/dt-1.10.10/datatables.min.css"/> -->
+
+
+        {% block css %}{% end %}
+
+        {% include 'product/product_box.html' %}
+        {% include 'product/product_home.html' %}
+
+        {% if is_admin %}
+        {% set editabletext = 'editabletext' %}
+        {% else %}
+        {% set editabletext = '' %}
+        {% end %}
+
+    </head>
+
+
+
+    <body>
+        {% block header %}{% end %}
+        {% block body %}{% end %}
+
+         <!-- Modal -->
+    <div align="center">
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title ">Resumen de tu compra</h4>
+                    </div>
+                    <div class="modal-body mlb-btn">
+                        <div class="container-fluid cart-list" ng-controller="">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Nombre</th>
+                                                <th class="text-center2">Precio</th>
+                                                <th class="text-center">Cant</th>
+                                                <th class="text-center">Eliminar</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="shopping-cart">
+                                        </tbody>
+                                    </table>
+                                    <div class="checkout-form"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ********Modal filtros ordenar******** -->
+
+<!-- Modal -->
+<div id="myModal-orde" class="modal fade" role="dialog">
+  <div class="modal-dialog filtrosmovil">
+
+    <!-- Modal content-->
+    <div class="modal-content filtros">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title text-center"><br> ORDENAR POR:</h4>
+      </div>
+      <div class="modal-body text-center">
+         <ul class="">
+                    <li><a href="#!" class="mayor">Precio: Mayor a menor</a></li>
+                    <li><a href="#!" class="menor">Precio: Menor a mayor</a></li>
+                    <li><a href="#!" class="nombre">Nombre</a></li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="myModal-fil" class="modal fade" role="dialog">
+  <div class="modal-dialog filtrosmovil">
+
+    <!-- Modal content-->
+    <div class="modal-content filtros">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title text-center"><br> FILTRAR POR:</h4>
+      </div>
+      <div class="modal-body fili text-center">
+     <!-- ******section filtros******* -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+        <!-- gif loading editableimage -->
+        <img id="imgLOAD" width="50" height="50" src="{{ site_base }}/common/css/loading.gif" />
+
+        <script type="text/javascript">
+        var site_base = "{{ site_base }}"
+        </script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/static/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+
+        <script type="text/javascript" src="{{ site_base }}/common/js/jquery.editable.js" ></script>
+        <script type="text/javascript" src="{{ site_base }}/common/js/editabletext.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/common/js/editablelink.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/common/js/page_editable.js"></script>
+
+        <script type="text/javascript" src="{{ site_base }}/common/js/editableimage.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/common/js/plugins/loadingplay/fileuploader/dist/fileuploader.js"></script>
+
+        <!-- carga de productos -->
+        <!-- <script type="text/javascript" src="{{ site_base }}/static/js/plugins/jquery.lazyload.js"></script> -->
+        <!-- <script type="text/javascript" src="{{ site_base }}/static/js/imageloader.js" ></script> -->
+
+        <script type="text/javascript" src="{{ site_base }}/common/js/jquery.cookie.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/common/js/environment.detection.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.js?2"></script>
+
+        <!--
+        <script type="text/javascript" src="{{ site_base }}/static/js/fancybox/jquery.fancybox.pack.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/static/js/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/s/dt/dt-1.10.10/datatables.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.11/js/dataTables.bootstrap.min.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/static/js/jquery.ellipsis.js"></script>
+        -->
+
+        <script type="text/javascript" src="{{ site_base }}/common/js/parallax.min.js"></script>
+
+
+         <script type="text/javascript" src="{{ site_base }}/common/js/jquery.ellipsis.js"></script>
+
+        <!--
+        <div type="template" id="product_loading" style="display:none;" >
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+        </div>
+        -->
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                $(".fancybox").fancybox({
+                    'width':800,
+                    'height':630,
+                    'autoSize' : false,
+                    'autoScale': false,
+                    'padding': 0,
+                    'helpers': {
+                            overlay: {
+                                locked: false
+                            }
+                        }
+                });
+            });
+        </script>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+
+                $(document).on("click", ".lupita", function(ev){
+                    $(".buscar-movil").toggle(1000);
+                });
+            });
+
+        </script>
+
+<!-- este es el script para unidades -->
+<!-- <script type="text/x-template" id="shopping-cart-product">
+<tr>
+    <td class="vert-align text-left">{{! name }}</td>
+    <td class="vert-align">{{! combination }}</td>
+    <td class="vert-align money">{{! price }}</td>
+    <td class="text-center vert-align" style="border-bottom: 1px solid #ddd;">
+        <a href="#!" class="remove-one" product-id="{{! id }}">-</a>
+        {{! quantity }}
+        <a href="#!" class="add-one" product-id="{{! id }}">+</a>
+    </td>
+    <td class="remove-from-cart text-center" style="border-bottom: 1px solid #ddd;" product-id="{{! id }}" aria-hidden="true"> X  </td>
+    <td class="text-center vert-align" style="border-bottom: 1px solid #ddd;"><a class="borrarproducto" cart-id=""><i class="icon-close"></i></a></td>
+</tr>
+</script> -->
+
+<script type="text/x-template" id="shopping-cart-product">
+    <tr>
+        <td class="vert-align text-left">{{! name }}</td>
+        <td class="text-center2 vert-align">{{! price|money }}</td>
+        <td class="text-center vert-align fri" style="border-bottom: 1px solid #ddd;">
+            <a href="#!" class="remove-one" lp-cart-remove-one="{{! id }}">-</a>
+            {{! quantity }}
+            <a href="#!" class="add-one" lp-cart-add-one="{{! id }}" >+</a>
+        </td>
+        <td class="remove-from-cart text-center fri" lp-cart-remove="{{! id }}" aria-hidden="true"> X  </td>
+        <td class="text-center vert-align fri">
+            <a class="borrarproducto" cart-id="">
+                <i class="icon-close"></i>
+            </a>
+        </td>
+    </tr>
+</script>
+
+<script type="text/x-template" id="shopping-cart-total" >
+    <tr>
+    </tr>
+    <tr>
+        <td>Total:</td>
+        <td id="total" colspan="3" class="text-left total-modal lib">{{! total|money }}</td>
+        <td></td>
+    </tr>
+</script>
+
+<script type="text/x-template" id="shopping-cart-units-total" >
+    <span> {{! units_total }}</span>
+</script>
+
+<script type="text/x-template" id="shopping-cart-checkout-form" >
+    <form action="{{! checkout_url}}" method="get" novalidate id="shipping-form" class="myform" onclick="return Validate()">
+        <input name="site_id" class="form-control required" type="hidden" value="2">
+        <input name="cart_id" class="form-control required" type="hidden" value="{{! cart_id}}">
+        <input name="origin" class="form-control required" type="hidden" value="{{ site.name }}">
+        <div class="form-group text-center">
+             <button type="submit" class="btn bn" style="background-color:#5F8266;color: white;width: 31%;border-radius: 0px;height: 43px;font-weight: 100;float: right;">
+                PAGAR
+            </button>
+        </div>
+        <div class="">
+            <a class="modal-close pin" data-dismiss="modal" aria-hidden="true">VOLVER</a>
+        </div>
+    </form>
+</script>
+
+
+
+
+<!-- termino carrito de compra -->
+
+        {% block javascript %}{% end %}
+        <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '348231912006000',
+                xfbml: true,
+                version: 'v2.1'
+            });
+        };
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        </script>
+
+        {% if is_admin %}
+        <script type="text/javascript">
+        var site_name="{{site.name}}";
+        </script>
+        <script type="text/javascript" src="{{ site_base }}/static/js/header.js" ></script>
+        <script type="text/javascript" src="{{ site_base }}/common/js/contentmanager.js" ></script>
+
+        {% end %}
+
+        <script type="text/javascript" src"https://clouddelivery.textbox.io/1/getEditor?apiKey=1wugguwjiatkm69xmt7w1den1mpvqkxi75mwfmb49lz89o4r">
+        </script>
+
+
+
+
+<script type="text/javascript">
+        $('ul.nav div.dropdown').hover(function() 
+        {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+        }, function() 
+        {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+        });
+</script>
+
+
+
+    </body>
+</html>
