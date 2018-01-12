@@ -4,16 +4,16 @@
 $(document).ready(function() 
 {
 
-    var base_url = $.environmentVar(
-        'https://apibodegas.loadingplay.com/',
-        'https://apibodegas.loadingplay.com/',
-        'https://apibodegas.loadingplay.com/');
-    var checkout_url = $.environmentVar(
-        'https://pay.loadingplay.com',
-        'https://pay.loadingplay.com',
-        'https://pay.loadingplay.com');
-    var app_public = $.environmentVar(53,53,53);
-    var site_name = $.environmentVar('placare', 'placare', 'placare');
+var base_url = $.environmentVar(
+            'https://apibodegas.ondev.today/',
+            'https://apibodegas.ondev.today/',,
+            'https://apibodegas.loadingplay.com/');
+        var checkout_url = $.environmentVar(
+            'https://lpcheckout.ondev.today/',
+            'https://lpcheckout.ondev.today/',
+            'https://pay.loadingplay.com');
+    var app_public = $.environmentVar(2,2,2);
+    var site_name = $.environmentVar('familymarket', 'familymarket', 'familymarket');
 
     // functions 
     // productos relacionados
