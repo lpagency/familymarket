@@ -26,21 +26,19 @@
     <script type="text/javascript" src="{{ site_base }}/static/js/cart.config.js"></script>
     <script type="text/javascript" src="{{ site_base }}/static/js/filter.js"></script>
     <script type="text/javascript" src="{{ site_base }}/static/js/filtros.js"></script>
-<!-- 
     <script type="text/javascript">
-      $(document).ready(function()
-      {
-
-        $(".mobile2").css("display", "none");
-
-        $(document).on("click", ".bars", function()
+        $(document).ready(function()
         {
-
-          $(".mobile2").toggle("slow");
-
+            $(document).on("click", ".pagar-script", function()
+            {
+                gtag('event', 'conversion',
+                {
+                    'send_to': 'AW-832277849/pO9PCPilxHsQ2ZrujAM',
+                    'transaction_id': ''
+                });
+            });
         });
-      });
-    </script> -->
+    </script>
 
     <script type="text/javascript">
         $(document).ready(function()

@@ -25,6 +25,19 @@
 <script type="text/javascript" src="{{ site_base }}/static/js/swiper.js"></script>
 <script type="text/javascript" src="{{ site_base }}/static/Swiper-3.4.2/dist/js/swiper.min.js"></script>
 
+<script type="text/javascript">
+    $(document).ready(function()
+    {
+        $(document).on("click", ".pagar-script", function()
+        {
+            gtag('event', 'conversion',
+            {
+                'send_to': 'AW-832277849/pO9PCPilxHsQ2ZrujAM',
+                'transaction_id': ''
+            });
+        });
+    });
+</script>
 
 <script type="text/javascript">
   $(document).ready(function()
@@ -69,7 +82,7 @@
             'https://apibodegas.ondev.today/',
             'https://apibodegas.loadingplay.com/');
         var checkout_url = $.environmentVar(
-            'https://lpcheckout.ondev.today/',
+            'http://localhost:8522/',
             'https://lpcheckout.ondev.today/',
             'https://pay.loadingplay.com');
         var app_public = $.environmentVar(2,2,2);

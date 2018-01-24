@@ -11,6 +11,21 @@
 
 {% block javascript %}
 <script type="text/javascript" src="{{ site_base }}/static/js/dermatologia.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function()
+    {
+        $(document).on("click", ".pagar-script", function()
+        {
+            gtag('event', 'conversion',
+            {
+                'send_to': 'AW-832277849/pO9PCPilxHsQ2ZrujAM',
+                'transaction_id': ''
+            });
+        });
+    });
+</script>
+
 <script type="text/javascript">
   $(window).scroll(function(){
 

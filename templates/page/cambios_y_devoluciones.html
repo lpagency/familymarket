@@ -20,6 +20,21 @@
         $("#wrapper").toggleClass("toggled");
     });
 </script>
+
+<script type="text/javascript">
+    $(document).ready(function()
+    {
+        $(document).on("click", ".pagar-script", function()
+        {
+            gtag('event', 'conversion',
+            {
+                'send_to': 'AW-832277849/pO9PCPilxHsQ2ZrujAM',
+                'transaction_id': ''
+            });
+        });
+    });
+</script>
+
 <script type="text/javascript">
 
     $(document).ready(function()
@@ -32,7 +47,7 @@
 
         var base_url = $.environmentVar(
             'https://apibodegas.ondev.today/',
-            'https://apibodegas.ondev.today/',,
+            'https://apibodegas.ondev.today/',
             'https://apibodegas.loadingplay.com/');
         var checkout_url = $.environmentVar(
             'https://lpcheckout.ondev.today/',
