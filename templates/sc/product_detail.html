@@ -21,7 +21,7 @@
 {% end %}
 
 {% block javascript %}
-<script type="text/javascript" src="{{ site_base }}/static/js/product_detail.js"></script>
+<script type="text/javascript" src="{{ site_base }}/static/js/product_detail.es5.js"></script>
 <script type="text/javascript" src="{{ site_base }}/static/js/swiper.js"></script>
 <script type="text/javascript" src="{{ site_base }}/static/Swiper-3.4.2/dist/js/swiper.min.js"></script>
 
@@ -99,7 +99,9 @@
                 for( i in product.tags)
                 {
                     related_random(product.tags[0].name);
+                    console.log(product.tags[0].name);
                     related(product.tags[1].name);
+                    console.log(product.tags[1].name);
                 }
 
                 var mainImage = $("#mainImage");
