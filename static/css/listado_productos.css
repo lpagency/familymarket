@@ -462,7 +462,6 @@ hr.len {
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    left: 2%;
     position: relative;
 }
 
@@ -3704,6 +3703,12 @@ a.text.detalle {
     padding-left: 0px;
     left: 0%;
     position: relative;
+}
+
+.fa-check-square{
+    right: -2px;
+    position: relative;
+    top: -3px;
 }
 
 .bul{

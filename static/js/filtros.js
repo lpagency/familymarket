@@ -16,15 +16,21 @@ $(document).ready(function()
     window.listaTag = [];
 
     var base_url = $.environmentVar(
-            'https://apibodegas.ondev.today/',
+            'https://apibodegas.loadingplay.com/',
             'https://apibodegas.ondev.today/',
             'https://apibodegas.loadingplay.com/');
         var checkout_url = $.environmentVar(
-            'https://localhost:8522/',
+            'http://localhost:8522/',
             'https://lpcheckout.ondev.today/',
             'https://pay.loadingplay.com');
     var app_public = $.environmentVar(2,2,2);
     var site_name = $.environmentVar('familymarket', 'familymarket', 'familymarket');
+
+    setTimeout(function()
+    {
+        $(".products").html('<img src="http://thinkfuture.com/wp-content/uploads/2013/10/loading_spinner.gif"'
+                                +'style="position: relative; left: 250px;">');
+    },100);
 
     window.config = {
         'app_public': app_public,
@@ -167,8 +173,6 @@ $(document).ready(function()
     config.tag = listaTag.join(',');
     $('.products').ecommerce(config);
 
-    $(document).ecommerce(config);
-
     $(".limpiar").click(function()
     {
         limpiar(config, hyper);
@@ -237,7 +241,6 @@ $(document).ready(function()
         $(".vari").css("margin-bottom", "5%");
 
     });
-
 
 });
 
