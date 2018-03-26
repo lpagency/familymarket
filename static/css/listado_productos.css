@@ -1803,6 +1803,10 @@ a.text {
     margin-bottom: -17px;
 }
 
+.cargando-filtros{
+    left: 150px !important;
+}
+
 }
 
 
@@ -3111,6 +3115,10 @@ a.text {
     font-weight: 600;
 }
 
+.cargando-filtros{
+    left: 100px !important;
+}
+
 .bul{
     top: -36px;
 }
@@ -3703,6 +3711,10 @@ a.text.detalle {
     padding-left: 0px;
     left: 0%;
     position: relative;
+}
+
+.cargando-filtros{
+    left: 85px !important;
 }
 
 .fa-check-square{

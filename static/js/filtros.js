@@ -28,7 +28,7 @@ $(document).ready(function()
 
     setTimeout(function()
     {
-        $(".products").html('<img src="http://thinkfuture.com/wp-content/uploads/2013/10/loading_spinner.gif"'
+        $(".products").html('<img class="cargando-filtros" src="http://thinkfuture.com/wp-content/uploads/2013/10/loading_spinner.gif"'
                                 +'style="position: relative; left: 250px;">');
     },100);
 

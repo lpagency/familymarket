@@ -385,6 +385,13 @@ a.desktop-submit {
 
 }
 
+@media (max-width: 768px){
+    .navbar-nav.sa{
+        left: -13%;
+        top: 44px;
+    }
+}
+
 @media (max-width: 767px){
 .container.min {
     width: 100%;
