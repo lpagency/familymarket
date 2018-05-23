@@ -116,7 +116,6 @@ label.c-variable_1
     margin-left: 10px;
 }
 
-
 label.c-variable_2
 {
     display: inline-block;
@@ -4422,7 +4421,6 @@ hr.lon
     }
 }
 
-
 @media (max-width: 320px)
 {
     .conti
@@ -4442,7 +4440,6 @@ hr.lon
         height: 340px;
         margin-bottom: 0px;
     }
-
 
     .descuento-detalle
     {

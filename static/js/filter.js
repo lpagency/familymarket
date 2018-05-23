@@ -1,6 +1,5 @@
 $(document).ready(function()
 {
-
     $(document).on("click", ".botonMasFiltros", function(ev)
     {
         $(".filtro-filtros").toggle(1000);
