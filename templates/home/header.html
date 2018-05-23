@@ -1,147 +1,231 @@
-
 <!-- ********HEADER DESKTOP*********** -->
 <div class="container-fluid hidden-xs visible-lg visible-md visible-sm" style="border-bottom:1px solid #E9E9ED;">
-        <div class="container">
-          <ul class="nav navbar-nav navbar-left dos">
-              <li class="slogan"><a href="{{ site_base }}/condiciones_envio">CONDICIONES Y ZONAS DE DESPACHO</a></li>
-              <li class=""><a href="#" style="color:#eaeaec;">|</a></li>
-              <li class="slogan"><a href="{{ site_base }}/terminos_y_condiciones">TERMINOS Y CONDICIONES</a></li>
-              <li class=""><a href="#" style="color:#eaeaec;">|</a></li>
-              <li class="slogan"><a href="{{ site_base }}/contact">CONTACTANOS</a></li>
-            </ul>
-          <div class="col-md-6 col-sm-6 col-xs-12">
-              <div class="text-slogan {{editabletext}}" text-id="{{ site.name + '_productos' }}"> {{ read_text(site.name +  '_productos') }}</div>
-          </div>
+    <div class="container">
+        <ul class="nav navbar-nav navbar-left dos">
+            <li class="slogan">
+                <a href="{{ site_base }}/condiciones_envio">CONDICIONES Y ZONAS DE DESPACHO</a>
+            </li>
+            <li class="">
+                <a href="#" style="color:#eaeaec;">|</a>
+            </li>
+            <li class="slogan">
+                <a href="{{ site_base }}/terminos_y_condiciones">TERMINOS Y CONDICIONES</a>
+            </li>
+            <li class="">
+                <a href="#" style="color:#eaeaec;">|</a>
+            </li>
+            <li class="slogan">
+                <a href="{{ site_base }}/contact">CONTACTANOS</a>
+            </li>
+        </ul>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="text-slogan {{editabletext}}" text-id="{{ site.name + '_productos' }}"> {{ read_text(site.name + '_productos') }}</div>
         </div>
+    </div>
 </div>
 <div class="container min">
-      <!-- Static navbar -->
-      <nav class="navbar navbar-default hidden-xs visible-md visible-lg visible-sm">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default hidden-xs visible-md visible-lg visible-sm">
         <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
-           <!-- <form id="searchForm" role="search" action="{{site_base}}/listado_productos" method="get" class="style-form2"> -->
-            <div class="desktop-query hidden-lg hidden-md- hidden-sm visible-xs" data-reactid="457">
-              <input placeholder="Buscar" class="desktop-searchBar" value="" data-reactid="458">
-              <a class="desktop-submit" data-reactid="459"><span class="myntraweb-sprite desktop-iconSearch sprites-search" data-reactid="460"></span> <i class="fa fa-search" aria-hidden="true"></i></a>
-            </div>
-           <!-- </form> -->
-          <div style="position:relative">
-           <div class="col-md-2">
-             <div class="caja-logo">
-               {% if is_admin %}
-               <div class="image-upload lapiz visible-movil">
-                <label for="img_header_logo">
-                 <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
-               </label>
-               <input type="file" class="editableimage" image-id="{{ site.name }}_header_logo" name="image" id="img_header_logo" >
-             </div>
-             {% end %}
-             <a href="">
-             <img id="{{ site.name }}_header_logo" src="{{ read_image(site.name + '_header_logo', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_header_logo',) }}'" class="img-responsive logo" alt="item">
-             </a>
-           </div>
-         </div>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav sa">
-                 <div class="dropdown col-sm-3 col-md-3">
-                <button class="btn btn-primary header dropdown-toggle" type="button" data-toggle="dropdown" tag="" onclick="window.location.href='{{ site_base }}/listado_productos?tag=perro'">PERROS
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
-                  <ul class="dropdown-menu hed">
-                    <li><a href="{{ site_base }}/listado_productos?tag=perro,+dog_chow">Dog Chow</a></li>
-                    <li><a href="{{ site_base }}/listado_productos?tag=perro,+doko">Doko</a></li>
-                    <li><a href="{{ site_base }}/listado_productos?tag=perro,+pro_plan">Pro Plan</a></li>
-                    <li><a href="{{ site_base }}/listado_productos?tag=perro,+excellent">Excellent</a></li>
-                  </ul>
-                </div>
-                <div class="dropdown col-sm-3 col-md-3" style="left: 13px;">
-                <button class="btn btn-primary header dropdown-toggle" type="button" data-toggle="dropdown" tag="" onclick="window.location.href='{{ site_base }}/listado_productos?tag=gato'">GATOS
-                  </button>
-                  <ul class="dropdown-menu hed">
-                    <li><a href="{{ site_base }}/listado_productos?tag=gato,+cat_chow">Cat Chow</a></li>
-                    <li><a href="{{ site_base }}/listado_productos?tag=gato,+gati">Gati</a></li>
-                    <li><a href="{{ site_base }}/listado_productos?tag=gato,+proplan">Pro Plan</a></li>
-                  </ul>
-                </div>
-
-                <div class="dropdown col-sm-3 col-md-3" style="left: 14px;">
-                <button class="btn btn-primary header dropdown-toggle" type="button" data-toggle="dropdown" tag="" onclick="window.location.href='{{ site_base }}/listado_productos'">MARCAS
-                  </button>
-                  <ul class="dropdown-menu hed">
-                    <li><a href="{{ site_base }}/listado_productos?tag=dog_chow">Dog Chow</a></li>
-                    <li><a href="{{ site_base }}/listado_productos?tag=doko">Doko</a></li>
-                    <li><a href="{{ site_base }}/listado_productos?tag=pro_plan">Proplan</a></li>
-                    <li><a href="{{ site_base }}/listado_productos?tag=excellent">Excellent</a></li>
-                    <li><a href="{{ site_base }}/listado_productos?tag=cat_chow">Cat Chow</a></li>
-                    <li><a href="{{ site_base }}/listado_productos?tag=gati">Gati</a></li>
-                  </ul>
-                </div>
-              <li class="ofi col-sm-3"><a href="{{ site_base}}/listado_productos?tag=oferta">OFERTAS</a></li>
-            </ul>
-            <form id="searchform" role="search" action="{{ site_base }}/listado_productos" method="get" >
-            <ul class="nav navbar-nav navbar-right">
-              <div class="desktop-query" data-reactid="457">
-              <input placeholder="Buscar" name="search_query" class="desktop-searchBar" data-reactid="458" value="{% try %}{{search_query}}{% except %}{% end %}">
-              <a type="submit" class="desktop-submit" data-reactid="459"><span class="myntraweb-sprite desktop-iconSearch sprites-search" data-reactid="460"></span> <i class="fa fa-search" aria-hidden="true"></i></a>
             </div>
-            <li class="pal">|</li>
-              <li class="icon" id="open-cart" data-toggle="modal" data-target="#myModal">
-                <span> Tu Compra </span> <span class="units-total">0</span>
-              </li>
-               <li class="" id="open-cart" data-toggle="modal" data-target="#myModal">
-                <!-- <a href="" class="com"> Comprar </a> -->
-                <img class="img-bolsa" src="https://7static.loadingplay.com/static/images/1ce8436ded946db43060507a3b826882_iconoplacare.png">
-              </li>
-            </ul>
-            </form>
-          </div>
+            <div class="desktop-query hidden-lg hidden-md- hidden-sm visible-xs" data-reactid="457">
+                <input placeholder="Buscar" class="desktop-searchBar" value="" data-reactid="458">
+                <a class="desktop-submit" data-reactid="459">
+                    <span class="myntraweb-sprite desktop-iconSearch sprites-search" data-reactid="460"></span>
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div style="position:relative">
+                <div class="col-md-2">
+                    <div class="caja-logo">
+                        {% if is_admin %}
+                            <div class="image-upload lapiz visible-movil">
+                                <label for="img_header_logo">
+                                    <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                                </label>
+                                <input type="file" class="editableimage" image-id="{{ site.name }}_header_logo" name="image" id="img_header_logo">
+                            </div>
+                        {% end %}
+                        <a href="">
+                            <img id="{{ site.name }}_header_logo" src="{{ read_image(site.name + '_header_logo', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_header_logo',) }}'" class="img-responsive logo" alt="item">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav sa">
+                    <div class="dropdown col-sm-1 col-md-1 dropdown-cafe">
+                        <button class="btn btn-primary header dropdown-toggle" type="button" data-toggle="dropdown" tag="" onclick="window.location.href='{{ site_base }}/listado_productos?tag=cafe'">CAFE
+                        </button>
+                        <ul class="dropdown-menu hed">
+                            <li>
+                                <a href="{{ site_base }}/listado_productos?tag=nescafe">Nescafé</a>
+                            </li>
+                            <li>
+                                <a href="{{ site_base }}/listado_productos?tag=coffe_mate">Coffe mate</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dropdown col-sm-1 col-md-1 dropdown-chocolates">
+                        <button class="btn btn-primary header dropdown-toggle" type="button" data-toggle="dropdown" tag="" onclick="window.location.href='{{ site_base }}/listado_productos?tag=chocolates'">CHOCOLATES
+                        </button>
+                        <ul class="dropdown-menu hed">
+                            <li>
+                                <a href="{{ site_base }}/listado_productos?tag=trencito">Trencito</a>
+                            </li>
+                            <li>
+                                <a href="{{ site_base }}/listado_productos?tag=sanhe_nuss">Sanhe Nuss</a>
+                            </li>
+                            <li>
+                                <a href="{{ site_base }}/listado_productos?tag=capri">Capri</a>
+                            </li>
+                            <li>
+                                <a href="{{ site_base }}/listado_productos?tag=prestigio">Prestigio</a>
+                            </li>
+                            <li>
+                                <a href="{{ site_base }}/listado_productos?tag=super_8">Super 8</a>
+                            </li>
+                            <li>
+                                <a href="{{ site_base }}/listado_productos?tag=negrita">Negrita</a>
+                            </li>
+                            <li>
+                                <a href="{{ site_base }}/listado_productos?tag=otros_chocolates">Otros</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dropdown col-sm-1 col-md-1 dropdown-galletas">
+                        <button class="btn btn-primary header dropdown-toggle" type="button" data-toggle="dropdown" tag="" onclick="window.location.href='{{ site_base }}/listado_productos'">GALLETAS
+                        </button>
+                        <ul class="dropdown-menu hed">
+                            <li>
+                                <a href="{{ site_base }}/listado_productos?tag=mckay_clasica">McKay Clasica</a>
+                            </li>
+                            <li>
+                                <a href="{{ site_base }}/listado_productos?tag=mckay_mini">McKay Mini</a>
+                            </li>
+                            <li>
+                                <a href="{{ site_base }}/listado_productos?tag=nestle">Nestlé</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dropdown col-sm-1 col-md-1 dropdown-lacteos">
+                        <button class="btn btn-primary header dropdown-toggle" type="button" data-toggle="dropdown" tag="" onclick="window.location.href='{{ site_base }}/listado_productos'">LACTEOS
+                        </button>
+                        <ul class="dropdown-menu hed">
+                            <li>
+                                <a href="{{ site_base }}/listado_productos?tag=nestle_lacteos">Nestlé</a>
+                            </li>
+                            <li>
+                                <a href="{{ site_base }}/listado_productos?tag=ideal">Ideal</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dropdown col-sm-1 col-md-1 dropdown-lacteos">
+                        <button class="btn btn-primary header dropdown-toggle" type="button" data-toggle="dropdown" tag="" onclick="window.location.href='{{ site_base }}/listado_productos'">MAGGI
+                        </button>
+                        <ul class="dropdown-menu hed">
+                            <li>
+                                <a href="{{ site_base }}/listado_productos?tag=maggi_cremas">Cremas</a>
+                            </li>
+                            <li>
+                                <a href="{{ site_base }}/listado_productos?tag=maggi_sopas">Sopas</a>
+                            </li>
+                            <li>
+                                <a href="{{ site_base }}/listado_productos?tag=maggi_caldo">Caldos</a>
+                            </li>
+                            <li>
+                                <a href="{{ site_base }}/listado_productos?tag=maggi_salsa">Salsas</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dropdown col-sm-1 col-md-1">
+                        <button class="btn btn-primary header dropdown-toggle" type="button" data-toggle="dropdown" tag="" onclick="window.location.href='{{ site_base }}/listado_productos'">CULINARIOS
+                        </button>
+                        <ul class="dropdown-menu hed">
+                            <li>
+                                <a href="{{ site_base }}/listado_productos?tag=culinarios_imperial">Imperial</a>
+                            </li>
+                            <li>
+                                <a href="{{ site_base }}/listado_productos?tag=culinarios_maggi">Maggi</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dropdown col-sm-1 col-md-1 dropdown-mascotas">
+                        <button class="btn btn-primary header dropdown-toggle" type="button" data-toggle="dropdown" tag="" onclick="window.location.href='{{ site_base }}/listado_productos'">MASCOTAS
+                        </button>
+                        <ul class="dropdown-menu hed">
+                            <li>
+                                <a href="{{ site_base }}/listado_productos?tag=perro">Perros</a>
+                            </li>
+                            <li>
+                                <a href="{{ site_base }}/listado_productos?tag=gatos">Gatos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </ul>
+                <form id="searchform" role="search" action="{{ site_base }}/listado_productos" method="get">
+                    <ul class="nav navbar-nav navbar-right navbar-search">
+                        <div class="desktop-query" data-reactid="457">
+                            <input placeholder="Buscar" name="search_query" class="desktop-searchBar" data-reactid="458" value="{% try %}{{search_query}}{% except %}{% end %}">
+                            <a type="submit" class="desktop-submit" data-reactid="459">
+                                <span class="myntraweb-sprite desktop-iconSearch sprites-search" data-reactid="460"></span>
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <li class="pal">|</li>
+                        <li class="icon" id="open-cart" data-toggle="modal" data-target="#myModal">
+                            <span> Tu Compra </span> <span class="units-total">0</span>
+                        </li>
+                        <li class="" id="open-cart" data-toggle="modal" data-target="#myModal">
+                            <img class="img-bolsa" src="https://7static.loadingplay.com/static/images/1ce8436ded946db43060507a3b826882_iconoplacare.png">
+                        </li>
+                    </ul>
+                </form>
+            </div>
         </div>
-      </nav>
-    </div> <!-- /container -->
-    <div class="container-fluid" style="border-bottom:1px solid #E9E9ED;"></div>
-
-    <!-- ********HEADER DESKTOP*********** -->
-
-
-
-<!-- ********************************************MENUU MOVIL******************* -->
-
-<div class="back-menu navbar-fixed-top hidden-lg hidden-md hidden-sm visible-xs">
-  <div style="position:relative">
-   <div class="caja-logo">
-     {% if is_admin %}
-     <div class="image-upload lapiz visible-movil">
-      <label for="img_header_logo">
-       <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
-     </label>
-     <input type="file" class="editableimage" image-id="{{ site.name }}_header_logo" name="image" id="img_header_logo" >
-   </div>
-   {% end %}
-   <img id="{{ site.name }}_header_logo" src="{{ read_image(site.name + '_header_logo', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_header_logo',) }}'" class="img-responsive logo" alt="item">
- </div>
-</div> 
-<li> <img class="lupita" src="https://7static.loadingplay.com/static/images/00b8e08bfc6dc648c60d3fd4811a7b80_lupa.png">
-</li>
-<li class="" id="open-cart" data-toggle="modal" data-target="#myModal">
-  <img class="img-bolsa" src="https://7static.loadingplay.com/static/images/1ce8436ded946db43060507a3b826882_iconoplacare.png">
-</li>
-<div align="center" class="hidden-lg hidden-md hidden-sm visible-xs">
-  <div class="col-xs-12"  style="margin-top: 0px;">
-    <div class="input-group movil buscar-movil" style="display: none">
-      <input type="text" class="form-control movil" placeholder="Busqueda por productos & marcas">
-      <span class="input-group-btn">
-        <button class="btn btn-default movil" type="button">Buscar</button>
-      </span>
-    </div>
-  </div>
+    </nav>
 </div>
+<!-- /container -->
+<div class="container-fluid" style="border-bottom:1px solid #E9E9ED;"></div>
+<!-- ********HEADER DESKTOP*********** -->
+<!-- ********MENUU MOVIL************** -->
+<div class="back-menu navbar-fixed-top hidden-lg hidden-md hidden-sm visible-xs">
+    <div style="position:relative">
+        <div class="caja-logo">
+            {% if is_admin %}
+                <div class="image-upload lapiz visible-movil">
+                    <label for="img_header_logo">
+                        <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                    </label>
+                    <input type="file" class="editableimage" image-id="{{ site.name }}_header_logo" name="image" id="img_header_logo">
+                </div>
+            {% end %}
+            <img id="{{ site.name }}_header_logo" src="{{ read_image(site.name + '_header_logo', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_header_logo',) }}'" class="img-responsive logo" alt="item">
+        </div>
+    </div>
+    <li>
+        <img class="lupita" src="https://7static.loadingplay.com/static/images/00b8e08bfc6dc648c60d3fd4811a7b80_lupa.png">
+    </li>
+    <li class="" id="open-cart" data-toggle="modal" data-target="#myModal">
+        <img class="img-bolsa" src="https://7static.loadingplay.com/static/images/1ce8436ded946db43060507a3b826882_iconoplacare.png">
+    </li>
+    <div align="center" class="hidden-lg hidden-md hidden-sm visible-xs">
+        <div class="col-xs-12" style="margin-top: 0px;">
+            <div class="input-group movil buscar-movil" style="display: none">
+                <input type="text" class="form-control movil" placeholder="Busqueda por productos & marcas">
+                <span class="input-group-btn">
+                    <button class="btn btn-default movil" type="button">Buscar</button>
+                </span>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="container hidden-lg hidden-md hidden-sm visible-xs">
     <div id="wrapper">
@@ -153,57 +237,146 @@
                     </div>
                 </li>
                 <li class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
-                  <li class="dropdown-submenu mobile2"> 
-                    <div class="">
-                     <button type="button" class="btn btn-info edu" data-toggle="collapse" data-target="#demo">PERROS <i class="fa fa-angle-right" aria-hidden="true"></i> </button>
-                     <div id="demo" class="collapse" style="margin-top: 0px;">
-                      <a href="{{ site_base }}/listado_productos?tag=perro,+dog_chow" class="den">
-                      <div class="">Dog Chow</div>
-                      </a>
-                      <a href="{{ site_base }}/listado_productos?tag=perro,+doko" class="den">
-                      <div class="">Doko</div>
-                      </a>
-                      <a href="{{ site_base }}/listado_productos?tag=pro_plan" class="den">
-                      <div class="s">Pro Plan</div>
-                      </a>
-                      <a href="{{ site_base }}/listado_productos?tag=perro,+excellent" class="den">
-                      <div class="">Excellent</div>
-                      </a>
-                      </div>
-                     </div>
-
-                    <div class="">
-                     <button type="button" class="btn btn-info edu" data-toggle="collapse" data-target="#hombre">GATOS<i class="fa fa-angle-right" aria-hidden="true"></i> </button>
-                     <div id="hombre" class="collapse" style="margin-top: 0px;">
-                      <a href="{{ site_base }}/listado_productos?tag=gato,+cat_chow" class="den">
-                      <div class="">Cat Chow</div>
-                      </a>
-                      <a href="{{ site_base }}/listado_productos?tag=gato,+gati" class="den">
-                      <div class="">Gati</div>
-                      </a>
-                      <a href="{{ site_base }}/listado_productos?tag=gato,+proplan" class="den">
-                      <div class="s">Pro Plan</div>
-                      </a>
-                      </div>
-                     </div>
-
-
-                     <li><a href="#" class="mobile2">OFERTAS</a></li>
-                     <li><a href="{{ site_base }}/condiciones_envio" class="tri mobile2">Condiciones y Zonas de despacho</a></li>
-                     <li><a href="{{ site_base }}/terminos_y_condiciones" class="tri mobile2">Términos y Condiciones</a></li>
-                     <li><a href="#" class="fink mobile2">Contacto</a></li>
-                  </li>
-               </li>
+                    <li class="dropdown-submenu mobile2">
+                        <div class="">
+                            <button type="button" class="btn btn-info edu" data-toggle="collapse" data-target="#demo">
+                                CAFE
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </button>
+                            <div id="demo" class="collapse" style="margin-top: 0px;">
+                                <a href="{{ site_base }}/listado_productos?tag=nescafe" class="den">
+                                    <div class="">Nescafé</div>
+                                </a>
+                                <a href="{{ site_base }}/listado_productos?tag=coffe_mate" class="den">
+                                    <div class="">Coffe Mate</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="">
+                            <button type="button" class="btn btn-info edu" data-toggle="collapse" data-target="#chocolates">
+                                CHOCOLATES
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </button>
+                            <div id="chocolates" class="collapse" style="margin-top: 0px;">
+                                <a href="{{ site_base }}/listado_productos?tag=trencito" class="den">
+                                    <div class="">Trencito</div>
+                                </a>
+                                <a href="{{ site_base }}/listado_productos?tag=sanhe_nuss" class="den">
+                                    <div class="">Sanhe Nuss</div>
+                                </a>
+                                <a href="{{ site_base }}/listado_productos?tag=prestigio" class="den">
+                                    <div class="">Prestigio</div>
+                                </a>
+                                <a href="{{ site_base }}/listado_productos?tag=super_8" class="den">
+                                    <div class="">Super 8</div>
+                                </a>
+                                <a href="{{ site_base }}/listado_productos?tag=negrita" class="den">
+                                    <div class="">Negrita</div>
+                                </a>
+                                <a href="{{ site_base }}/listado_productos?tag=capri" class="den">
+                                    <div class="s">Capri</div>
+                                </a>
+                                <a href="{{ site_base }}/listado_productos?tag=otros_chocolates" class="den">
+                                    <div class="s">Otros</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="">
+                            <button type="button" class="btn btn-info edu" data-toggle="collapse" data-target="#galletas">
+                                GALLETAS
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </button>
+                            <div id="galletas" class="collapse" style="margin-top: 0px;">
+                                <a href="{{ site_base }}/listado_productos?tag=mckay_clasica" class="den">
+                                    <div class="">McKay Clasica</div>
+                                </a>
+                                <a href="{{ site_base }}/listado_productos?tag=mckay_mini" class="den">
+                                    <div class="">McKay Mini</div>
+                                </a>
+                                <a href="{{ site_base }}/listado_productos?tag=nestle" class="den">
+                                    <div class="">Nestlé</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="">
+                            <button type="button" class="btn btn-info edu" data-toggle="collapse" data-target="#lacteos">
+                                LACTEOS
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </button>
+                            <div id="lacteos" class="collapse" style="margin-top: 0px;">
+                                <a href="{{ site_base }}/listado_productos?tag=nestle_lacteos" class="den">
+                                    <div class="">Nestlé</div>
+                                </a>
+                                <a href="{{ site_base }}/listado_productos?tag=ideal" class="den">
+                                    <div class="">Ideal</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="">
+                            <button type="button" class="btn btn-info edu" data-toggle="collapse" data-target="#maggi">
+                                MAGGI
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </button>
+                            <div id="maggi" class="collapse" style="margin-top: 0px;">
+                                <a href="{{ site_base }}/listado_productos?tag=maggi_cremas" class="den">
+                                    <div class="">Cremas</div>
+                                </a>
+                                <a href="{{ site_base }}/listado_productos?tag=maggi_sopas" class="den">
+                                    <div class="">Sopas</div>
+                                </a>
+                                <a href="{{ site_base }}/listado_productos?tag=maggi_caldo" class="den">
+                                    <div class="">Caldos</div>
+                                </a>
+                                <a href="{{ site_base }}/listado_productos?tag=maggi_salsa" class="den">
+                                    <div class="">Salsas</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="">
+                            <button type="button" class="btn btn-info edu" data-toggle="collapse" data-target="#culinarios">
+                                CULINARIOS
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </button>
+                            <div id="culinarios" class="collapse" style="margin-top: 0px;">
+                                <a href="{{ site_base }}/listado_productos?tag=culinarios_maggi" class="den">
+                                    <div class="">Maggi</div>
+                                </a>
+                                <a href="{{ site_base }}/listado_productos?tag=culinarios_imperial" class="den">
+                                    <div class="">Imperial</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="">
+                            <button type="button" class="btn btn-info edu" data-toggle="collapse" data-target="#mascotas">
+                                MASCOTAS
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </button>
+                            <div id="mascotas" class="collapse" style="margin-top: 0px;">
+                                <a href="{{ site_base }}/listado_productos?tag=perro" class="den">
+                                    <div class="">Perros</div>
+                                </a>
+                                <a href="{{ site_base }}/listado_productos?tag=gatos" class="den">
+                                    <div class="">Gatos</div>
+                                </a>
+                            </div>
+                        </div>
+                        <li>
+                            <a href="{{ site_base }}/condiciones_envio" class="tri mobile2">Condiciones y Zonas de despacho</a>
+                        </li>
+                        <li>
+                            <a href="{{ site_base }}/terminos_y_condiciones" class="tri mobile2">Términos y Condiciones</a>
+                        </li>
+                        <li>
+                            <a href="#" class="fink mobile2">Contacto</a>
+                        </li>
+                    </li>
+                </li>
             </ul>
         </div>
-
         <div id="page-content-wrapper">
-          <a href="#menu-toggle" id="menu-toggle" class="bars">
+            <a href="#menu-toggle" id="menu-toggle" class="bars">
                 <i class="fa fa-bars"></i>
-          </a>
+            </a>
         </div>
-        </div>
-
     </div>
- 
-
+</div>
