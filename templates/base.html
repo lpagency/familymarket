@@ -1,16 +1,15 @@
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
-         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-69991660-1"></script>
         <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
 
-          gtag('config', 'UA-69991660-1');
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-69991660-1');
         </script>
-        <!-- head bt inicio -->
         <title>Family Market</title>
         <base href="{{ site_base }}/">
         <meta charset="utf-8">
@@ -18,12 +17,9 @@
         <meta name="description" content="">
         <meta name="author" content="loadingplay.com">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="keywords" content="jquery, vertical, scrolling, scroll, smooth"/>
-
+        <meta name="keywords" content="jquery, vertical, scrolling, scroll, smooth" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-       <!--  <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet"> -->
-       <!-- <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7400796/8002792/css/fonts.css" /> -->
         <link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.css">
         <link rel="stylesheet" href="{{ site_base }}/common/css/editableimage.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -36,78 +32,56 @@
         <link rel="stylesheet" href="{{ site_base }}/static/css/listado_productos.css">
         <link rel="stylesheet" href="{{ site_base }}/static/css/checkout.css">
         <link rel="stylesheet" href="{{ site_base }}/static/css/simple-sidebar.css">
-
-
         <link rel="stylesheet" type="text/css" href="{{ site_base }}/static/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
-
-        <!-- aqui se ponen los demas css -de las paginas -->
         <link rel="stylesheet" href="{{ site_base }}/common/css/editableimage.css">
-
-
-        <!-- autocomplete
-        <link rel="stylesheet" type="text/css" href="{{ site_base }}/static/js/plugins/selectize/selectize.css" />
-        <!-autocomplete -->
-       <link rel="stylesheet" href="{{ site_base }}/common/js/bower/file_uploader/dist/fileuploader.css">
-
-
+        <link rel="stylesheet" href="{{ site_base }}/common/js/bower/file_uploader/dist/fileuploader.css">
         <link rel="stylesheet" href="{{ site_base }}/static/css/ligthbox-d.css">
-
-
-        <!-- <link rel="stylesheet" href="{{ site_base }}/static/js/fancybox/source/jquery.fancybox.css?v=2.1.5"> -->
-
         <link rel="stylesheet" href="{{ site_base }}/common/css/ellipsis.css">
-
-
-
-        <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/s/dt/dt-1.10.10/datatables.min.css"/> -->
-
-
-        {% block css %}{% end %}
+        {% block css %}
+        {% end %}
 
         {% include 'product/product_box.html' %}
         {% include 'product/product_home.html' %}
 
         {% if is_admin %}
-        {% set editabletext = 'editabletext' %}
+            {% set editabletext = 'editabletext' %}
         {% else %}
-        {% set editabletext = '' %}
+            {% set editabletext = '' %}
         {% end %}
-
     </head>
 
-
-
     <body>
-        {% block header %}{% end %}
-        {% block body %}{% end %}
+        {% block header %}
+        {% end %}
 
-         <!-- Modal -->
-    <div align="center">
-        <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title ">Resumen de tu compra</h4>
-                    </div>
-                    <div class="modal-body mlb-btn">
-                        <div class="container-fluid cart-list" ng-controller="">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>Nombre</th>
-                                                <th class="text-center2">Precio</th>
-                                                <th class="text-center">Cant</th>
-                                                <th class="text-center">Eliminar</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="shopping-cart">
-                                        </tbody>
-                                    </table>
-                                    <div class="checkout-form"></div>
+        {% block body %}
+        {% end %}
+        <div align="center">
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title ">Resumen de tu compra</h4>
+                        </div>
+                        <div class="modal-body mlb-btn">
+                            <div class="container-fluid cart-list" ng-controller="">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nombre</th>
+                                                    <th class="text-center2">Precio</th>
+                                                    <th class="text-center">Cant</th>
+                                                    <th class="text-center">Eliminar</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="shopping-cart">
+                                            </tbody>
+                                        </table>
+                                        <div class="checkout-form"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -115,402 +89,312 @@
                 </div>
             </div>
         </div>
-    </div>
-
-
-    <!-- ********Modal filtros ordenar******** -->
-
-<!-- Modal -->
-<div id="myModal-orde" class="modal fade" role="dialog">
-  <div class="modal-dialog filtrosmovil">
-
-    <!-- Modal content-->
-    <div class="modal-content filtros">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title text-center"><br> ORDENAR POR:</h4>
-      </div>
-      <div class="modal-body text-center">
-         <ul class="">
-                    <li><a href="#!" class="mayor">Precio: Mayor a menor</a></li>
-                    <li><a href="#!" class="menor">Precio: Menor a mayor</a></li>
-                    <li><a href="#!" class="nombre">Nombre</a></li>
-        </ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<div id="myModal-fil" class="modal fade" role="dialog">
-  <div class="modal-dialog filtrosmovil">
-
-    <!-- Modal content-->
-    <div class="modal-content filtros">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title text-center"><br> FILTRAR POR:</h4>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Filtrar</button>
-      </div>
-      <div class="modal-body fili text-center">
-        <div class="text-fil-2"> MARCAS </div>
-          <form action="/action_page.php" class="chek">
-              <div class="filtro-filtros perros hidden">
-                <input type="checkbox" class="categ hidden perros c-dog_chow" name="vehicle1" tag="dog_chow" value="Bike" value2="Dog Chow" onclick="check('dog_chow','Dog Chow')">
-                <div class="fil hidden perros h-dog_chow" onclick="check('dog_chow','Dog Chow')">Dog Chow</div>
-                <i class="fa fa-check-square ch-dog_chow hidden" aria-hidden="true" onclick="uncheck('dog_chow','Dog Chow')"></i>
-              </div>
-              <div class="filtro-filtros perros hidden">
-                <input type="checkbox" class="categ hidden perros c-doko" name="vehicle2" tag="doko" value="Car" value2="Doko" onclick="check('doko','Doko')">
-                <div class="fil hidden perros h-doko" onclick="check('doko','Doko')">Doko</div>
-                <i class="fa fa-check-square ch-doko hidden" aria-hidden="true" onclick="uncheck('doko','Doko')"></i>
-              </div>
-              <div class="filtro-filtros perros hidden">
-                <input type="checkbox" class="categ hidden perros c-pro_plan" name="vehicle3" tag="pro_plan" value="Boat" value2="Pro Plan" onclick="check('pro_plan','Pro Plan')">
-                <div class="fil hidden perros h-pro_plan" onclick="check('pro_plan','Pro Plan')">Pro Plan</div>
-                <i class="fa fa-check-square ch-pro_plan hidden" aria-hidden="true" onclick="uncheck('pro_plan','Pro Plan')"></i>
-              </div>
-              <div class="filtro-filtros perros hidden">
-                <input type="checkbox" class="categ hidden perros c-excetlent" name="vehicle3" tag="excetlent" value="Boat" value2="Excellent" onclick="check('excetlent','Excellent')">
-                <div class="fil hidden perros h-excetlent" onclick="check('excetlent','Excellent')">Excellent</div>
-                <i class="fa fa-check-square ch-excetlent hidden" aria-hidden="true" onclick="uncheck('excetlent','Excellent')"></i>
-              </div>
-
-              <div class="filtro-filtros gatos hidden">
-                <input type="checkbox" class="categ hidden gatos c-cat_chow" name="vehicle3" tag="cat_chow" value="Boat" value2="Cat Chow" onclick="check('cat_chow','Cat Chow')">
-                <div class="fil hidden gatos h-cat_chow" onclick="check('cat_chow','Cat Chow')">Cat Chow</div>
-                <i class="fa fa-check-square ch-cat_chow hidden" aria-hidden="true" onclick="uncheck('cat_chow','Cat Chow')"></i>
-              </div>
-
-              <div class="filtro-filtros gatos hidden">
-                <input type="checkbox" class="categ hidden gatos c-gati" name="vehicle3" tag="gati" value="Boat" value2="Gati" onclick="check('gati','Gati')">
-                <div class="fil hidden gatos h-gati" onclick="check('gati','Gati')">Gati</div>
-                <i class="fa fa-check-square ch-gati hidden" aria-hidden="true" onclick="uncheck('gati','Gati')"></i>
-              </div>
-
-              <div class="filtro-filtros gatos hidden">
-                <input type="checkbox" class="categ hidden gatos c-proplan" name="vehicle3" tag="proplan" value="Boat" value2="Proplan" onclick="check('proplan','Proplan')">
-                <div class="fil hidden gatos h-proplan" onclick="check('proplan','Proplan')">Proplan</div>
-                <i class="fa fa-check-square ch-proplan hidden" aria-hidden="true" onclick="uncheck('proplan','Proplan')"></i>
-              </div>
-          </form>
-
-          <div class="text-fil opw"> TIPO DE PERRO </div>
-            <div>
-            <form action="/action_page.php" class="chek">
-            <div class="filtro-color hidden perros">
-              <input type="checkbox" class="categ c-cachorro" tag="cachorro" value2="Cachorro" style="cursor: pointer;" onclick="check('cachorro','Cachorro')">
-              <div class="fil h-cachorro" onclick="check('cachorro','Cachorro')">Cachorro</div>
-              <i class="fa fa-check-square ch-cachorro hidden" aria-hidden="true" onclick="uncheck('cachorro','Cachorro')"></i>
+        <div id="myModal-orde" class="modal fade" role="dialog">
+            <div class="modal-dialog filtrosmovil">
+                <div class="modal-content filtros">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title text-center"><br> ORDENAR POR:</h4>
+                    </div>
+                    <div class="modal-body text-center">
+                        <ul class="">
+                            <li><a href="#!" class="mayor">Precio: Mayor a menor</a></li>
+                            <li><a href="#!" class="menor">Precio: Menor a mayor</a></li>
+                            <li><a href="#!" class="nombre">Nombre</a></li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
             </div>
-            <div class="filtro-color hidden perros">
-               <input type="checkbox" class="categ c-raza_pequenia" tag="raza_pequenia" value2="Raza Pequeña" style="cursor: pointer;" onclick="check('raza_pequenia','Raza Pequeña')">
-               <div class="fil h-raza_pequenia" onclick="check('raza_pequenia','Raza Pequeña')">Razas Pequeñas</div>
-               <i class="fa fa-check-square ch-raza_pequenia hidden" aria-hidden="true" onclick="uncheck('raza_pequenia','Raza Pequeña')"></i>
+        </div>
+        <div id="myModal-fil" class="modal fade" role="dialog">
+            <div class="modal-dialog filtrosmovil">
+                <div class="modal-content filtros">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title text-center"><br> FILTRAR POR:</h4>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Filtrar</button>
+                    </div>
+                    <div class="modal-body fili text-center">
+                        <div class="text-fil-2"> MARCAS </div>
+                        <form action="/action_page.php" class="chek">
+                            <div class="filtro-filtros perros hidden">
+                                <input type="checkbox" class="categ hidden perros c-dog_chow" name="vehicle1" tag="dog_chow" value="Bike" value2="Dog Chow" onclick="check('dog_chow','Dog Chow')">
+                                <div class="fil hidden perros h-dog_chow" onclick="check('dog_chow','Dog Chow')">Dog Chow</div>
+                                <i class="fa fa-check-square ch-dog_chow hidden" aria-hidden="true" onclick="uncheck('dog_chow','Dog Chow')"></i>
+                            </div>
+                            <div class="filtro-filtros perros hidden">
+                                <input type="checkbox" class="categ hidden perros c-doko" name="vehicle2" tag="doko" value="Car" value2="Doko" onclick="check('doko','Doko')">
+                                <div class="fil hidden perros h-doko" onclick="check('doko','Doko')">Doko</div>
+                                <i class="fa fa-check-square ch-doko hidden" aria-hidden="true" onclick="uncheck('doko','Doko')"></i>
+                            </div>
+                            <div class="filtro-filtros perros hidden">
+                                <input type="checkbox" class="categ hidden perros c-pro_plan" name="vehicle3" tag="pro_plan" value="Boat" value2="Pro Plan" onclick="check('pro_plan','Pro Plan')">
+                                <div class="fil hidden perros h-pro_plan" onclick="check('pro_plan','Pro Plan')">Pro Plan</div>
+                                <i class="fa fa-check-square ch-pro_plan hidden" aria-hidden="true" onclick="uncheck('pro_plan','Pro Plan')"></i>
+                            </div>
+                            <div class="filtro-filtros perros hidden">
+                                <input type="checkbox" class="categ hidden perros c-excetlent" name="vehicle3" tag="excetlent" value="Boat" value2="Excellent" onclick="check('excetlent','Excellent')">
+                                <div class="fil hidden perros h-excetlent" onclick="check('excetlent','Excellent')">Excellent</div>
+                                <i class="fa fa-check-square ch-excetlent hidden" aria-hidden="true" onclick="uncheck('excetlent','Excellent')"></i>
+                            </div>
+                            <div class="filtro-filtros gatos hidden">
+                                <input type="checkbox" class="categ hidden gatos c-cat_chow" name="vehicle3" tag="cat_chow" value="Boat" value2="Cat Chow" onclick="check('cat_chow','Cat Chow')">
+                                <div class="fil hidden gatos h-cat_chow" onclick="check('cat_chow','Cat Chow')">Cat Chow</div>
+                                <i class="fa fa-check-square ch-cat_chow hidden" aria-hidden="true" onclick="uncheck('cat_chow','Cat Chow')"></i>
+                            </div>
+                            <div class="filtro-filtros gatos hidden">
+                                <input type="checkbox" class="categ hidden gatos c-gati" name="vehicle3" tag="gati" value="Boat" value2="Gati" onclick="check('gati','Gati')">
+                                <div class="fil hidden gatos h-gati" onclick="check('gati','Gati')">Gati</div>
+                                <i class="fa fa-check-square ch-gati hidden" aria-hidden="true" onclick="uncheck('gati','Gati')"></i>
+                            </div>
+                            <div class="filtro-filtros gatos hidden">
+                                <input type="checkbox" class="categ hidden gatos c-proplan" name="vehicle3" tag="proplan" value="Boat" value2="Proplan" onclick="check('proplan','Proplan')">
+                                <div class="fil hidden gatos h-proplan" onclick="check('proplan','Proplan')">Proplan</div>
+                                <i class="fa fa-check-square ch-proplan hidden" aria-hidden="true" onclick="uncheck('proplan','Proplan')"></i>
+                            </div>
+                        </form>
+                        <div class="text-fil opw"> TIPO DE PERRO </div>
+                        <div>
+                            <form action="/action_page.php" class="chek">
+                                <div class="filtro-color hidden perros">
+                                    <input type="checkbox" class="categ c-cachorro" tag="cachorro" value2="Cachorro" style="cursor: pointer;" onclick="check('cachorro','Cachorro')">
+                                    <div class="fil h-cachorro" onclick="check('cachorro','Cachorro')">Cachorro</div>
+                                    <i class="fa fa-check-square ch-cachorro hidden" aria-hidden="true" onclick="uncheck('cachorro','Cachorro')"></i>
+                                </div>
+                                <div class="filtro-color hidden perros">
+                                    <input type="checkbox" class="categ c-raza_pequenia" tag="raza_pequenia" value2="Raza Pequeña" style="cursor: pointer;" onclick="check('raza_pequenia','Raza Pequeña')">
+                                    <div class="fil h-raza_pequenia" onclick="check('raza_pequenia','Raza Pequeña')">Razas Pequeñas</div>
+                                    <i class="fa fa-check-square ch-raza_pequenia hidden" aria-hidden="true" onclick="uncheck('raza_pequenia','Raza Pequeña')"></i>
+                                </div>
+                                <div class="filtro-color hidden perros">
+                                    <input type="checkbox" class="categ c-raza_mediana" tag="raza_mediana" value2="Raza Mediana" style="cursor: pointer;" onclick="check('raza_mediana','Raza Mediana')">
+                                    <div class="fil h-raza_mediana" onclick="check('raza_mediana','Raza Mediana')">Razas Medianas</div>
+                                    <i class="fa fa-check-square ch-raza_mediana hidden" aria-hidden="true" onclick="uncheck('raza_mediana','Raza Mediana')"></i>
+                                </div>
+                                <div class="filtro-color hidden perros">
+                                    <input type="checkbox" class="categ c-raza_adulta" tag="raza_adulta" value2="Raza Adulta" style="cursor: pointer;" onclick="check('raza_adulta','Raza Adulta')">
+                                    <div class="fil h-raza_adulta" onclick="check('raza_adulta','Raza Adulta')">Razas Adultas</div>
+                                    <i class="fa fa-check-square ch-raza_adulta hidden" aria-hidden="true" onclick="uncheck('raza_adulta','Raza Adulta')"></i>
+                                </div>
+                                <div class="filtro-color hidden gatos">
+                                    <input type="checkbox" class="categ c-gatito" value2="Gatito" tag="gatito" style="cursor: pointer;" onclick="check('gatito','Gatito')">
+                                    <div class="fil h-gatito" onclick="check('gatito', 'Gatito')">Gatito</div>
+                                    <i class="fa fa-check-square ch-gatito hidden" aria-hidden="true" onclick="uncheck('gatito','Gatito')"></i>
+                                </div>
+                                <div class="filtro-color hidden gatos">
+                                    <input type="checkbox" class="categ c-adulto" tag="adulto" value2="Adulto" style="cursor: pointer;" onclick="check('adulto', 'Adulto')">
+                                    <div class="fil h-adulto" onclick="check('adulto','Adulto')">Adulto</div>
+                                    <i class="fa fa-check-square ch-adulto hidden" aria-hidden="true" onclick="uncheck('adulto','Adulto')"></i>
+                                </div>
+                            </form>
+                            <div class="clearfix"></div>
+                            <div class="text-fil"> FORMATO </div>
+                            <form action="/action_page.php" class="chek">
+                                <div class="filtro-talla">
+                                    <input type="checkbox" class="categ c-menos-1kilo" name="vehicle1" tag="menos-1kilo" value2="Menos De 1 Kilo" value="Bike" onclick="check('menos-1kilo','Menos De 1 Kilo')">
+                                    <div class="fil h-menos-1kilo" onclick="check('menos-1kilo','Menos De 1 Kilo')"> Menos De 1 Kilo </div>
+                                    <i class="fa fa-check-square ch-menos-1kilo hidden" aria-hidden="true" onclick="uncheck('menos-1kilo','Menos De 1 Kilo')"></i>
+                                </div>
+                                <div class="filtro-talla">
+                                    <input type="checkbox" class="categ c-1_kilo" name="vehicle2" tag="1_kilo" value2="1 Kilo" value="Cara" onclick="check('1_kilo','1 Kilo')">
+                                    <div class="fil h-1_kilo" onclick="check('1_kilo','1 Kilo')">1 Kilo</div>
+                                    <i class="fa fa-check-square ch-1_kilo hidden" aria-hidden="true" onclick="uncheck('1_kilo','1 Kilo')"></i>
+                                </div>
+                                <div class="filtro-talla">
+                                    <input type="checkbox" class="categ c-1_5_kilos" name="vehicle2" tag="1_5_kilos" value2="1.5 Kilos" value="Cara" onclick="check('1_5_kilos','1.5 Kilos')">
+                                    <div class="fil h-1_5_kilos" onclick="check('1_5_kilos','1.5 Kilos')"> 1.5 Kilos </div>
+                                    <i class="fa fa-check-square ch-1_5_kilos hidden" aria-hidden="true" onclick="uncheck('1_5_kilos','1.5 Kilos')"></i>
+                                </div>
+                                <div class="filtro-talla">
+                                    <input type="checkbox" class="categ c-3_kilos" name="vehicle2" tag="3_kilos" value2="3 Kilos" value="Cara" onclick="check('3_kilos','3 Kilos')">
+                                    <div class="fil h-3_kilos" onclick="check('3_kilos','3 Kilos')"> 3 Kilos </div>
+                                    <i class="fa fa-check-square ch-3_kilos hidden" aria-hidden="true" onclick="uncheck('3_kilos','3 Kilos')"></i>
+                                </div>
+                                <div class="filtro-talla">
+                                    <input type="checkbox" class="categ c-75_kilos" name="vehicle2" tag="75_kilos" value2="7.5 Kilos" value="Cara" onclick="check('75_kilos','7.5 Kilos')">
+                                    <div class="fil h-75_kilos" onclick="check('75_kilos','7.5 Kilos')"> 7.5 Kilos </div>
+                                    <i class="fa fa-check-square ch-75_kilos hidden" aria-hidden="true" onclick="uncheck('75_kilos','7.5 Kilos')"></i>
+                                </div>
+                                <div class="filtro-talla">
+                                    <input type="checkbox" class="categ c-8_kilos" name="vehicle2" tag="8_kilos" value2="8 Kilos" value="Cara" onclick="check('8_kilos','8 Kilos')">
+                                    <div class="fil h-8_kilos" onclick="check('8_kilos','8 Kilos')"> 8 Kilos </div>
+                                    <i class="fa fa-check-square ch-8_kilos hidden" aria-hidden="true" onclick="uncheck('8_kilos','8 Kilos')"></i>
+                                </div>
+                                <div class="filtro-talla">
+                                    <input type="checkbox" class="categ c-15_kilos" name="vehicle2" tag="15_kilos" value2="15 Kilos" value="Cara" onclick="check('15_kilos','15 Kilos')">
+                                    <div class="fil h-15_kilos" onclick="check('15_kilos','15 Kilos')"> 15 Kilos </div>
+                                    <i class="fa fa-check-square ch-15_kilos hidden" aria-hidden="true" onclick="uncheck('15_kilos','15 Kilos')"></i>
+                                </div>
+                                <div class="filtro-talla">
+                                    <input type="checkbox" class="categ c-20_kilos" name="vehicle2" tag="20_kilos" value2="3 Kilos" value="Cara" onclick="check('20_kilos','20 Kilos')">
+                                    <div class="fil h-20_kilos" onclick="check('20_kilos','20 Kilos')"> 20 Kilos </div>
+                                    <i class="fa fa-check-square ch-20_kilos hidden" aria-hidden="true" onclick="uncheck('20_kilos','20 Kilos')"></i>
+                                </div>
+                                <div class="filtro-talla hidden perros">
+                                    <input type="checkbox" class="categ hidden perros c-21_kilos" name="vehicle2" tag="21_kilos" value2="21 Kilos" value="Cara" onclick="check('21_kilos','21 Kilos')">
+                                    <div class="fil h-21_kilos" onclick="check('21_kilos','21 Kilos')"> 21 Kilos </div>
+                                    <i class="fa fa-check-square ch-21_kilos hidden" aria-hidden="true" onclick="uncheck('21_kilos','21 Kilos')"></i>
+                                </div>
+                                <div class="filtro-talla hidden perros">
+                                    <input type="checkbox" class="categ hidden perros c-22_5_kilos" name="vehicle2" tag="22_5_kilos" value2="22.5 Kilos" value="Cara" onclick="check('22_5_kilos','22.5 Kilos')">
+                                    <div class="fil h-22_5_kilos" onclick="check('22_5_kilos','22.5 Kilos')"> 22.5 Kilos </div>
+                                    <i class="fa fa-check-square ch-22_5_kilos hidden" aria-hidden="true" onclick="uncheck('22_5_kilos','22.5 Kilos')"></i>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="filtro-color hidden perros">
-               <input type="checkbox" class="categ c-raza_mediana" tag="raza_mediana" value2="Raza Mediana" style="cursor: pointer;" onclick="check('raza_mediana','Raza Mediana')">
-               <div class="fil h-raza_mediana" onclick="check('raza_mediana','Raza Mediana')">Razas Medianas</div>
-               <i class="fa fa-check-square ch-raza_mediana hidden" aria-hidden="true" onclick="uncheck('raza_mediana','Raza Mediana')"></i>
-            </div>
-             <div class="filtro-color hidden perros">
-               <input type="checkbox" class="categ c-raza_adulta" tag="raza_adulta" value2="Raza Adulta" style="cursor: pointer;" onclick="check('raza_adulta','Raza Adulta')">
-               <div class="fil h-raza_adulta" onclick="check('raza_adulta','Raza Adulta')">Razas Adultas</div>
-               <i class="fa fa-check-square ch-raza_adulta hidden" aria-hidden="true" onclick="uncheck('raza_adulta','Raza Adulta')"></i>
-            </div>
-            <div class="filtro-color hidden gatos">
-               <input type="checkbox" class="categ c-gatito" value2="Gatito" tag="gatito" style="cursor: pointer;" onclick="check('gatito','Gatito')">
-               <div class="fil h-gatito" onclick="check('gatito', 'Gatito')">Gatito</div>
-               <i class="fa fa-check-square ch-gatito hidden" aria-hidden="true" onclick="uncheck('gatito','Gatito')"></i>
-            </div>
-            <div class="filtro-color hidden gatos">
-               <input type="checkbox" class="categ c-adulto" tag="adulto" value2="Adulto" style="cursor: pointer;" onclick="check('adulto', 'Adulto')">
-               <div class="fil h-adulto" onclick="check('adulto','Adulto')">Adulto</div>
-               <i class="fa fa-check-square ch-adulto hidden" aria-hidden="true" onclick="uncheck('adulto','Adulto')"></i>
-             </div>
-            </form>
-
-          <div class="clearfix"></div>
-         <div class="text-fil"> FORMATO </div>
-          <form action="/action_page.php" class="chek">
-              <div class="filtro-talla">
-                <input type="checkbox" class="categ c-menos-1kilo" name="vehicle1" tag="menos-1kilo" value2="Menos De 1 Kilo" value="Bike" onclick="check('menos-1kilo','Menos De 1 Kilo')">
-                <div class="fil h-menos-1kilo" onclick="check('menos-1kilo','Menos De 1 Kilo')"> Menos De 1 Kilo </div>
-                <i class="fa fa-check-square ch-menos-1kilo hidden" aria-hidden="true" onclick="uncheck('menos-1kilo','Menos De 1 Kilo')"></i>
-              </div>
-
-              <div class="filtro-talla">
-                <input type="checkbox" class="categ c-1_kilo" name="vehicle2" tag="1_kilo" value2="1 Kilo" value="Cara" onclick="check('1_kilo','1 Kilo')">
-                <div class="fil h-1_kilo" onclick="check('1_kilo','1 Kilo')">1 Kilo</div>
-                <i class="fa fa-check-square ch-1_kilo hidden" aria-hidden="true" onclick="uncheck('1_kilo','1 Kilo')"></i>
-              </div>
-
-              <div class="filtro-talla">
-                <input type="checkbox" class="categ c-1_5_kilos" name="vehicle2" tag="1_5_kilos" value2="1.5 Kilos" value="Cara" onclick="check('1_5_kilos','1.5 Kilos')">
-                <div class="fil h-1_5_kilos" onclick="check('1_5_kilos','1.5 Kilos')"> 1.5 Kilos </div>
-                <i class="fa fa-check-square ch-1_5_kilos hidden" aria-hidden="true" onclick="uncheck('1_5_kilos','1.5 Kilos')"></i>
-              </div>
-
-              <div class="filtro-talla">
-                <input type="checkbox" class="categ c-3_kilos" name="vehicle2" tag="3_kilos" value2="3 Kilos" value="Cara" onclick="check('3_kilos','3 Kilos')">
-                <div class="fil h-3_kilos" onclick="check('3_kilos','3 Kilos')"> 3 Kilos </div>
-                <i class="fa fa-check-square ch-3_kilos hidden" aria-hidden="true" onclick="uncheck('3_kilos','3 Kilos')"></i>
-              </div>
-
-              <div class="filtro-talla">
-                <input type="checkbox" class="categ c-75_kilos" name="vehicle2" tag="75_kilos" value2="7.5 Kilos" value="Cara" onclick="check('75_kilos','7.5 Kilos')">
-                <div class="fil h-75_kilos" onclick="check('75_kilos','7.5 Kilos')"> 7.5 Kilos </div>
-                <i class="fa fa-check-square ch-75_kilos hidden" aria-hidden="true" onclick="uncheck('75_kilos','7.5 Kilos')"></i>
-              </div>
-
-              <div class="filtro-talla">
-                <input type="checkbox" class="categ c-8_kilos" name="vehicle2" tag="8_kilos" value2="8 Kilos" value="Cara" onclick="check('8_kilos','8 Kilos')">
-                <div class="fil h-8_kilos" onclick="check('8_kilos','8 Kilos')"> 8 Kilos </div>
-                <i class="fa fa-check-square ch-8_kilos hidden" aria-hidden="true" onclick="uncheck('8_kilos','8 Kilos')"></i>
-              </div>
-
-              <div class="filtro-talla">
-                <input type="checkbox" class="categ c-15_kilos" name="vehicle2" tag="15_kilos" value2="15 Kilos" value="Cara" onclick="check('15_kilos','15 Kilos')">
-                <div class="fil h-15_kilos" onclick="check('15_kilos','15 Kilos')"> 15 Kilos </div>
-                <i class="fa fa-check-square ch-15_kilos hidden" aria-hidden="true" onclick="uncheck('15_kilos','15 Kilos')"></i>
-              </div>
-
-              <div class="filtro-talla">
-                <input type="checkbox" class="categ c-20_kilos" name="vehicle2" tag="20_kilos" value2="3 Kilos" value="Cara" onclick="check('20_kilos','20 Kilos')">
-                <div class="fil h-20_kilos" onclick="check('20_kilos','20 Kilos')"> 20 Kilos </div>
-                <i class="fa fa-check-square ch-20_kilos hidden" aria-hidden="true" onclick="uncheck('20_kilos','20 Kilos')"></i>
-              </div>
-
-              <div class="filtro-talla hidden perros">
-                <input type="checkbox" class="categ hidden perros c-21_kilos" name="vehicle2" tag="21_kilos" value2="21 Kilos" value="Cara" onclick="check('21_kilos','21 Kilos')">
-                <div class="fil h-21_kilos" onclick="check('21_kilos','21 Kilos')"> 21 Kilos </div>
-                <i class="fa fa-check-square ch-21_kilos hidden" aria-hidden="true" onclick="uncheck('21_kilos','21 Kilos')"></i>
-              </div>
-
-              <div class="filtro-talla hidden perros">
-                <input type="checkbox" class="categ hidden perros c-22_5_kilos" name="vehicle2" tag="22_5_kilos" value2="22.5 Kilos" value="Cara" onclick="check('22_5_kilos','22.5 Kilos')">
-                <div class="fil h-22_5_kilos" onclick="check('22_5_kilos','22.5 Kilos')"> 22.5 Kilos </div>
-                <i class="fa fa-check-square ch-22_5_kilos hidden" aria-hidden="true" onclick="uncheck('22_5_kilos','22.5 Kilos')"></i>
-              </div>
-          </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-
-
-
-        <!-- gif loading editableimage -->
+        </div>
         <img id="imgLOAD" width="50" height="50" src="{{ site_base }}/common/css/loading.gif" />
-
         <script type="text/javascript">
-        var site_base = "{{ site_base }}"
+            var site_base = "{{ site_base }}"
         </script>
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="{{ site_base }}/static/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
-
-        <script type="text/javascript" src="{{ site_base }}/common/js/jquery.editable.js" ></script>
+        <script type="text/javascript" src="{{ site_base }}/common/js/jquery.editable.js"></script>
         <script type="text/javascript" src="{{ site_base }}/common/js/editabletext.js"></script>
         <script type="text/javascript" src="{{ site_base }}/common/js/editablelink.js"></script>
         <script type="text/javascript" src="{{ site_base }}/common/js/page_editable.js"></script>
-
         <script type="text/javascript" src="{{ site_base }}/common/js/editableimage.js"></script>
         <script type="text/javascript" src="{{ site_base }}/common/js/bower/file_uploader/dist/fileuploader.js"></script>
-
-        <!-- carga de productos -->
-        <!-- <script type="text/javascript" src="{{ site_base }}/static/js/plugins/jquery.lazyload.js"></script> -->
-        <!-- <script type="text/javascript" src="{{ site_base }}/static/js/imageloader.js" ></script> -->
-
         <script type="text/javascript" src="{{ site_base }}/common/js/jquery.cookie.js"></script>
         <script type="text/javascript" src="{{ site_base }}/common/js/environment.detection.js"></script>
         <script type="text/javascript" src="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.es5.js?2"></script>
-
-        <!--
-        <script type="text/javascript" src="{{ site_base }}/static/js/fancybox/jquery.fancybox.pack.js"></script>
-        <script type="text/javascript" src="{{ site_base }}/static/js/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
-        <script type="text/javascript" src="https://cdn.datatables.net/s/dt/dt-1.10.10/datatables.min.js"></script>
-        <script type="text/javascript" src="https://cdn.datatables.net/1.10.11/js/dataTables.bootstrap.min.js"></script>
-        <script type="text/javascript" src="{{ site_base }}/static/js/jquery.ellipsis.js"></script>
-        -->
-
         <script type="text/javascript" src="{{ site_base }}/common/js/parallax.min.js"></script>
-
-
-         <script type="text/javascript" src="{{ site_base }}/common/js/jquery.ellipsis.js"></script>
-
-        <!--
-        <div type="template" id="product_loading" style="display:none;" >
-            <div class="spinner">
-                <div class="rect1"></div>
-                <div class="rect2"></div>
-                <div class="rect3"></div>
-                <div class="rect4"></div>
-                <div class="rect5"></div>
-            </div>
-        </div>
-        -->
-
-        <script type="text/javascript">
-            $(document).ready(function () {
-
-                $(".fancybox").fancybox({
-                    'width':800,
-                    'height':630,
-                    'autoSize' : false,
-                    'autoScale': false,
-                    'padding': 0,
-                    'helpers': {
-                            overlay: {
-                                locked: false
-                            }
-                        }
-                });
-            });
-        </script>
-
-        <script type="text/javascript">
-            $(document).ready(function(){
-
-                $(document).on("click", ".lupita", function(ev){
-                    $(".buscar-movil").toggle(1000);
-                });
-            });
-
-        </script>
-
-<!-- este es el script para unidades -->
-<!-- <script type="text/x-template" id="shopping-cart-product">
-<tr>
-    <td class="vert-align text-left">{{! name }}</td>
-    <td class="vert-align">{{! combination }}</td>
-    <td class="vert-align money">{{! price }}</td>
-    <td class="text-center vert-align" style="border-bottom: 1px solid #ddd;">
-        <a href="#!" class="remove-one" product-id="{{! id }}">-</a>
-        {{! quantity }}
-        <a href="#!" class="add-one" product-id="{{! id }}">+</a>
-    </td>
-    <td class="remove-from-cart text-center" style="border-bottom: 1px solid #ddd;" product-id="{{! id }}" aria-hidden="true"> X  </td>
-    <td class="text-center vert-align" style="border-bottom: 1px solid #ddd;"><a class="borrarproducto" cart-id=""><i class="icon-close"></i></a></td>
-</tr>
-</script> -->
-
-<script type="text/x-template" id="shopping-cart-product">
-    <tr>
-        <td class="vert-align text-left">{{! name }}</td>
-        <td class="text-center2 vert-align">{{! price|money }}</td>
-        <td class="text-center vert-align fri" style="border-bottom: 1px solid #ddd;">
-            <a href="#!" class="remove-one" lp-cart-remove-one="{{! id }}">-</a>
-            {{! quantity }}
-            <a href="#!" class="add-one" lp-cart-add-one="{{! id }}" >+</a>
-        </td>
-        <td class="remove-from-cart text-center fri" lp-cart-remove="{{! id }}" aria-hidden="true"> X  </td>
-        <td class="text-center vert-align fri">
-            <a class="borrarproducto" cart-id="">
-                <i class="icon-close"></i>
-            </a>
-        </td>
-    </tr>
-</script>
-
-<script type="text/x-template" id="shopping-cart-total" >
-    <tr>
-    </tr>
-    <tr>
-        <td>Total:</td>
-        <td id="total" colspan="3" class="text-left total-modal lib">{{! total|money }}</td>
-        <td></td>
-    </tr>
-</script>
-
-<script type="text/x-template" id="shopping-cart-units-total" >
-    <span> {{! units_total }}</span>
-</script>
-
-<script type="text/x-template" id="shopping-cart-checkout-form" >
-    <form action="{{! checkout_url}}" method="get" novalidate id="shipping-form" class="myform" onclick="return Validate()">
-        <input name="site_id" class="form-control required" type="hidden" value="2">
-        <input name="cart_id" class="form-control required" type="hidden" value="{{! cart_id}}">
-        <input name="origin" class="form-control required" type="hidden" value="{{ site.name }}">
-        <div class="form-group text-center">
-             <button type="submit" class="btn pagar-script bn" style="background-color:#5F8266;color: white;width: 31%;border-radius: 0px;height: 43px;font-weight: 100;float: right;">
-                PAGAR
-            </button>
-        </div>
-        <div class="">
-            <a class="modal-close pin" data-dismiss="modal" aria-hidden="true">VOLVER</a>
-        </div>
-    </form>
-</script>
-
-
-
-
-<!-- termino carrito de compra -->
-
-        {% block javascript %}{% end %}
-        <script>
-        window.fbAsyncInit = function() {
-            FB.init({
-                appId: '348231912006000',
-                xfbml: true,
-                version: 'v2.1'
-            });
-        };
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {
-                return;
-            }
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-        </script>
-
-        {% if is_admin %}
-        <script type="text/javascript">
-        var site_name="{{site.name}}";
-        </script>
-        <script type="text/javascript" src="{{ site_base }}/static/js/header.js" ></script>
-        <script type="text/javascript" src="{{ site_base }}/common/js/contentmanager.js" ></script>
-
-        {% end %}
-
-        <script type="text/javascript" src"https://clouddelivery.textbox.io/1/getEditor?apiKey=1wugguwjiatkm69xmt7w1den1mpvqkxi75mwfmb49lz89o4r">
-        </script>
-
-        <script type="text/javascript">
-                $('ul.nav div.dropdown').hover(function()
-                {
-                    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
-                }, function()
-                {
-                    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
-                });
-        </script>
-
+        <script type="text/javascript" src="{{ site_base }}/common/js/jquery.ellipsis.js"></script>
         <script type="text/javascript">
             $(document).ready(function()
             {
-                if($(window).width() == 1024)
+                $(".fancybox").fancybox(
                 {
-                    $(".header").attr('onclick','').unbind('click');
+                    'width': 800,
+                    'height': 630,
+                    'autoSize': false,
+                    'autoScale': false,
+                    'padding': 0,
+                    'helpers':
+                    {
+                        overlay:
+                        {
+                            locked: false
+                        }
+                    }
+                });
+            });
+        </script>
+        <script type="text/javascript">
+        $(document).ready(function()
+        {
+            $(document).on("click", ".lupita", function(ev)
+            {
+                $(".buscar-movil").toggle(1000);
+            });
+        });
+        </script>
+        <script type="text/x-template" id="shopping-cart-product">
+            <tr>
+                <td class="vert-align text-left">{{! name }}</td>
+                <td class="text-center2 vert-align">{{! price|money }}</td>
+                <td class="text-center vert-align fri" style="border-bottom: 1px solid #ddd;">
+                    <a href="#!" class="remove-one" lp-cart-remove-one="{{! id }}">-</a> {{! quantity }}
+                    <a href="#!" class="add-one" lp-cart-add-one="{{! id }}">+</a>
+                </td>
+                <td class="remove-from-cart text-center fri" lp-cart-remove="{{! id }}" aria-hidden="true"> X </td>
+                <td class="text-center vert-align fri">
+                    <a class="borrarproducto" cart-id="">
+                        <i class="icon-close"></i>
+                    </a>
+                </td>
+            </tr>
+        </script>
+        <script type="text/x-template" id="shopping-cart-total">
+            <tr>
+            </tr>
+            <tr>
+                <td>Total:</td>
+                <td id="total" colspan="3" class="text-left total-modal lib">{{! total|money }}</td>
+                <td></td>
+            </tr>
+        </script>
+        <script type="text/x-template" id="shopping-cart-units-total">
+            <span> {{! units_total }}</span>
+        </script>
+        <script type="text/x-template" id="shopping-cart-checkout-form">
+            <form action="{{! checkout_url}}" method="get" novalidate id="shipping-form" class="myform" onclick="return Validate()">
+                <input name="site_id" class="form-control required" type="hidden" value="2">
+                <input name="cart_id" class="form-control required" type="hidden" value="{{! cart_id}}">
+                <input name="origin" class="form-control required" type="hidden" value="{{ site.name }}">
+                <div class="form-group text-center">
+                    <button type="submit" class="btn pagar-script bn" style="background-color:#5F8266;color: white;width: 31%;border-radius: 0px;height: 43px;font-weight: 100;float: right;">
+                        PAGAR
+                    </button>
+                </div>
+                <div class="">
+                    <a class="modal-close pin" data-dismiss="modal" aria-hidden="true">VOLVER</a>
+                </div>
+            </form>
+        </script>
+
+        {% block javascript %}
+        {% end %}
+
+        <script>
+            window.fbAsyncInit = function()
+            {
+                FB.init(
+                {
+                    appId: '348231912006000',
+                    xfbml: true,
+                    version: 'v2.1'
+                });
+            };
+            (function(d, s, id)
+            {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id))
+                {
+                    return;
+                }
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+        {% if is_admin %}
+            <script type="text/javascript">
+                var site_name = "{{site.name}}";
+            </script>
+            <script type="text/javascript" src="{{ site_base }}/static/js/header.js"></script>
+            <script type="text/javascript" src="{{ site_base }}/common/js/contentmanager.js"></script>
+        {% end %}
+        <script type="text/javascript" src "https://clouddelivery.textbox.io/1/getEditor?apiKey=1wugguwjiatkm69xmt7w1den1mpvqkxi75mwfmb49lz89o4r"></script>
+        <script type="text/javascript">
+            $('ul.nav div.dropdown').hover(function()
+            {
+                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+            }, function()
+            {
+                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+            });
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function()
+            {
+                if ($(window).width() == 1024)
+                {
+                    $(".header").attr('onclick', '').unbind('click');
                 }
             });
         </script>
-
     </body>
 </html>
