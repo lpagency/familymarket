@@ -709,6 +709,11 @@ li.slogan a
         position: relative;
     }
 
+    li.dropdown-submenu.mobile2
+    {
+        min-height: 330px;
+    }
+
     .lupita
     {
         width: 6%;
