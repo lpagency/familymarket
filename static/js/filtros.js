@@ -23,7 +23,7 @@ $(document).ready(function()
             'http://localhost:8522/',
             'https://lpcheckout.ondev.today/',
             'https://pay.loadingplay.com');
-    var app_public = $.environmentVar(2,2,2);
+    var app_public = $.environmentVar('fm','fm','fm');
     var site_name = $.environmentVar('familymarket', 'familymarket', 'familymarket');
 
     setTimeout(function()
@@ -35,14 +35,14 @@ $(document).ready(function()
     window.config = {
         'app_public': app_public,
         'base_url': base_url,
-        'products_per_page' : 9, 
+        'products_per_page' : 9,
         'tag': '',
         'ignore_stock': true,
         'infinite_scroll': true,
         // 'maxProducts': 100,
-        'checkout_url': checkout_url, 
+        'checkout_url': checkout_url,
         'operator' :'or',
-        'onLoad': function(products) 
+        'onLoad': function(products)
         {
 
             console.log(products);
@@ -84,7 +84,7 @@ $(document).ready(function()
             $(".original-tachado").each(function()
             {
                 console.log("eee", $(this).attr("promotion-price"));
-                if($(this).attr("promotion-price") !== 0 && 
+                if($(this).attr("promotion-price") !== 0 &&
                     $(this).attr("promotion-price") !== 0.0)
                 {
                     $(this).removeClass("hidden");
@@ -326,7 +326,7 @@ function check(tag, value)
     {
 
         var nombre = tag;
-        var block = 
+        var block =
                 '<ul class="fil-ul '+nombre+'"><li class="li-fil"><div class="ordenar-precio '+nombre+'"> '
                 +nombre+' <i class="fa fa-times aria-hidden="true" onclick="borrar('+"'"+nombre+"'"+')"></i></div></li></ul>';
 
@@ -360,7 +360,7 @@ function check(tag, value)
 
         var nombre = tag;
         var va = value;
-        var block = 
+        var block =
                 '<ul class="fil-ul '+nombre+'"><li class="li-fil"><div class="ordenar-precio '+nombre+'"> '
                 +va+' <i class="fa fa-times" aria-hidden="true" onclick="borrar('+"'"+nombre+"'"+','+"'"+va+"'"+')"></i></div></li></ul>';
 
@@ -483,7 +483,7 @@ function TagURL(listaTag)
                                 '<ul class="fil-ul '+nombre+'"><li class="li-fil"><div class="ordenar-precio '+nombre+'"> '
                                 +nombre+' <i class="fa fa-times aria-hidden="true" onclick="borrar('+"'"+nombre+"'"+')"></i></div></li></ul>';
 
-                        $(".texto-ruta").html(textoRuta +" / "+ nombre); 
+                        $(".texto-ruta").html(textoRuta +" / "+ nombre);
                     }
 
                     var classNombre = "." + nombre;

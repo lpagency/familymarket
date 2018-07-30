@@ -13,5 +13,5 @@
             'http://localhost:8522/',
             'https://lpcheckout.ondev.today/',
             'https://pay.loadingplay.com');
-        var app_public = $.environmentVar(2,2,2);
-        var site_name = $.environmentVar('familymarket', 'familymarket', 'familymarket'); 
+        var app_public = $.environmentVar('fm','fm','fm');
+        var site_name = $.environmentVar('familymarket', 'familymarket', 'familymarket');
