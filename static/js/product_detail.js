@@ -1,7 +1,7 @@
 /* global $ */
 'use strict';
 
-$(document).ready(function() 
+$(document).ready(function()
 {
 
 var base_url = $.environmentVar(
@@ -12,12 +12,12 @@ var base_url = $.environmentVar(
             'http://localhost:8522/',
             'https://lpcheckout.ondev.today/',
             'https://pay.loadingplay.com');
-    var app_public = $.environmentVar(2,2,2);
+    var app_public = $.environmentVar('fm','fm','fm');
     var site_name = $.environmentVar('familymarket', 'familymarket', 'familymarket');
 
-    // functions 
+    // functions
     // productos relacionados
-    var related = function(tag) 
+    var related = function(tag)
     {
         var config = {
             'app_public': app_public,
@@ -31,7 +31,7 @@ var base_url = $.environmentVar(
         $('.product-related').ecommerce('product_box', config);
     };
 
-    //cambia imagenes pequeñas en detalle de producto 
+    //cambia imagenes pequeñas en detalle de producto
     $(document).on("click", '.little', function(){
         $("#img_detail").attr("src", $(this).attr('src'));
     });
