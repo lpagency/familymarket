@@ -181,6 +181,7 @@ div.upload input, div.image-upload input {
 }
 
 .btn-default.comprar-home {
+    display:none;	
     color: white;
     background-color: #439A9A;
     border-color: #439A9A;
