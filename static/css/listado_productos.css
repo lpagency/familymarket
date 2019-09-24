@@ -647,6 +647,7 @@ hr.len
 
 .btn-success.car
 {
+    display:none;
     color: white;
     background-color: #5F8266;
     border-color: #5F8266;
@@ -843,6 +844,7 @@ a.talla
 
 .btn-success.car-2
 {
+    display:none;
     color: white;
     background-color: #5A5751;
     border-color: #5A5751;
@@ -1279,6 +1281,7 @@ a.variables:active
 
 a.text
 {
+    display:none;
     background-color: transparent;
     color: #526CD0;
     font-size: 13px;
@@ -1292,6 +1295,7 @@ a.text
 
 a.text.detalle
 {
+    display:none;
     background-color: transparent;
     color: #526CD0;
     font-size: 12px;
@@ -1923,6 +1927,7 @@ hr.lon
 
     a.text
     {
+        display:none;
         background-color: transparent;
         font-size: 16px;
         padding: 7px 26px;
@@ -2505,6 +2510,7 @@ hr.lon
 
     a.text
     {
+        display:none;
         background-color: transparent;
         font-size: 16px;
         padding: 7px 132px;
@@ -2515,6 +2521,7 @@ hr.lon
 
     a.text.detalle
     {
+        display:none;
         background-color: transparent;
         font-size: 16px;
         padding: 7px 146px;
@@ -2890,6 +2897,7 @@ hr.lon
 {
     a.text
     {
+        display:none;
         background-color: transparent;
         font-size: 16px;
         padding: 7px 115px;
@@ -2900,6 +2908,7 @@ hr.lon
 
     a.text.detalle
     {
+        display:none;
         background-color: transparent;
         font-size: 16px;
         padding: 7px 130px;
@@ -2944,6 +2953,7 @@ hr.lon
 
     a.text
     {
+        display:none;
         background-color: transparent;
         font-size: 16px;
         padding: 7px 90px;
@@ -2981,6 +2991,7 @@ hr.lon
 
     a.text.detalle
     {
+        display:none;
         background-color: transparent;
         font-size: 16px;
         padding: 7px 103px;
@@ -3085,6 +3096,7 @@ hr.lon
 
     a.text
     {
+        display:none;
         background-color: transparent;
         font-size: 16px;
         padding: 7px 95px;
@@ -3096,6 +3108,7 @@ hr.lon
 
     a.text.detalle
     {
+        display:none;
         background-color: transparent;
         font-size: 16px;
         padding: 7px 88px;
@@ -3262,6 +3275,7 @@ hr.lon
 
     a.text.detalle
     {
+        display:none;
         background-color: transparent;
         font-size: 16px;
         padding: 7px 82px;
@@ -3308,6 +3322,7 @@ hr.lon
 
     a.text
     {
+        display:none;
         background-color: transparent;
         font-size: 16px;
         padding: 7px 83px;
@@ -3529,6 +3544,7 @@ hr.lon
 
     a.text
     {
+        display:none;
         background-color: transparent;
         font-size: 16px;
         padding: 7px 67px;
@@ -3857,6 +3873,7 @@ hr.lon
 
     a.text.detalle
     {
+        display:none;
         background-color: transparent;
         font-size: 16px;
         padding: 7px 60px;
@@ -3922,6 +3939,7 @@ hr.lon
 
     a.text
     {
+        display:none;
         background-color: transparent;
         font-size: 16px;
         padding: 7px 64px;
@@ -3961,6 +3979,7 @@ hr.lon
 
     a.text.detalle
     {
+        display:none;
         background-color: transparent;
         font-size: 16px;
         padding: 7px 57px;
@@ -4052,6 +4071,7 @@ hr.lon
 
     a.text
     {
+        display:none;
         background-color: transparent;
         font-size: 16px;
         padding: 7px 60px;
@@ -4061,6 +4081,7 @@ hr.lon
 
     a.text.detalle
     {
+        display:none;
         background-color: transparent;
         font-size: 16px;
         padding: 7px 50px;
@@ -4268,6 +4289,7 @@ hr.lon
 {
     a.text
     {
+        display:none;
         background-color: transparent;
         font-size: 16px;
         padding: 7px 54px;
@@ -4323,6 +4345,7 @@ hr.lon
 
     a.text.detalle
     {
+        display:none;
         background-color: transparent;
         font-size: 16px;
         padding: 7px 46px;
@@ -4468,6 +4491,7 @@ hr.lon
 
     a.text
     {
+        display:none;
         background-color: transparent;
         font-size: 16px;
         padding: 7px 43px;
@@ -4598,6 +4622,7 @@ hr.lon
 
     a.text.detalle
     {
+        display:none;
         background-color: transparent;
         font-size: 16px;
         padding: 7px 35px;
